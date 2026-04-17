@@ -2,6 +2,11 @@ const express = require('express');
 
 const router = express.Router();
 
-const {} = require('../controllers/notes.controller');
+const {
+    createNote,
+} = require('../controllers/notes.controllers');
+
+// CRUD Single Item Route
+router.post('/', createNote);
 
 module.exports = router;
