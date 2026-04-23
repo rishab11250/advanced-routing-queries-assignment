@@ -12,6 +12,7 @@ const {
     deleteNote,
     deleteBulkNotes,
     getNotesByCategory,
+    getNotesByStatus,
 } = require('../controllers/notes.controllers');
 
 // CRUD Bulk Routes
@@ -20,6 +21,7 @@ router.delete('/bulk', deleteBulkNotes);
 
 // Route Param Sections
 router.get('/category/:category', getNotesByCategory);
+router.get('/status/:isPinned', getNotesByStatus);
 
 // CRUD Single Item Routes
 router.post('/', createNote);
