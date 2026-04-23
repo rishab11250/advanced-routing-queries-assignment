@@ -15,6 +15,7 @@ const {
     getNotesByStatus,
     getNoteSummary,
     filterNotes,
+    getPinnedNotes,
 } = require('../controllers/notes.controllers');
 
 // CRUD Bulk Routes
@@ -27,6 +28,7 @@ router.get('/status/:isPinned', getNotesByStatus);
 
 // Query Param Sections
 router.get('/filter', filterNotes);
+router.get('/filter/pinned', getPinnedNotes);
 
 // CRUD Single Item Routes
 router.post('/', createNote);
