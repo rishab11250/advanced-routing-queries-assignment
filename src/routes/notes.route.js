@@ -13,6 +13,7 @@ const {
     deleteBulkNotes,
     getNotesByCategory,
     getNotesByStatus,
+    getNoteSummary,
 } = require('../controllers/notes.controllers');
 
 // CRUD Bulk Routes
@@ -26,6 +27,7 @@ router.get('/status/:isPinned', getNotesByStatus);
 // CRUD Single Item Routes
 router.post('/', createNote);
 router.get('/', getAllNotes);
+router.get('/:id/summary', getNoteSummary);
 router.get('/:id', getNoteById);
 router.put('/:id', replaceNote);
 router.patch('/:id', updateNote);
