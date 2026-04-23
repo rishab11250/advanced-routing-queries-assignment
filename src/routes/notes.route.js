@@ -20,6 +20,7 @@ const {
     filterByDateRange,
     paginateNotes,
     paginateByCategory,
+    sortNotes,
 } = require('../controllers/notes.controllers');
 
 // CRUD Bulk Routes
@@ -39,6 +40,9 @@ router.get('/filter/date-range', filterByDateRange);
 // Pagination
 router.get('/paginate', paginateNotes);
 router.get('/paginate/category/:category', paginateByCategory);
+
+// Sorting
+router.get('/sort', sortNotes);
 
 // CRUD Single Item Routes
 router.post('/', createNote);
