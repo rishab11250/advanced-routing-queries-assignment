@@ -21,6 +21,7 @@ const {
     paginateNotes,
     paginateByCategory,
     sortNotes,
+    sortPinnedNotes,
 } = require('../controllers/notes.controllers');
 
 // CRUD Bulk Routes
@@ -43,6 +44,7 @@ router.get('/paginate/category/:category', paginateByCategory);
 
 // Sorting
 router.get('/sort', sortNotes);
+router.get('/sort/pinned', sortPinnedNotes);
 
 // CRUD Single Item Routes
 router.post('/', createNote);
