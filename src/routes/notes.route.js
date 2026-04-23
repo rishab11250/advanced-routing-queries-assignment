@@ -18,6 +18,7 @@ const {
     getPinnedNotes,
     filterByCategory,
     filterByDateRange,
+    paginateNotes,
 } = require('../controllers/notes.controllers');
 
 // CRUD Bulk Routes
@@ -33,6 +34,9 @@ router.get('/filter', filterNotes);
 router.get('/filter/pinned', getPinnedNotes);
 router.get('/filter/category', filterByCategory);
 router.get('/filter/date-range', filterByDateRange);
+
+// Pagination
+router.get('/paginate', paginateNotes);
 
 // CRUD Single Item Routes
 router.post('/', createNote);
